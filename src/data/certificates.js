@@ -1,0 +1,46 @@
+export const certificates = [
+  {
+    title: 'Certified Principal Software Engineer',
+    issuer: 'micro1',
+    date: 'December 2024',
+    image: 'micro1-certificate.jpeg',
+    note: 'Passed micro1’s AI interview and certified as a Principal Software Engineer.',
+  },
+  {
+    title: 'Python (Basic)',
+    issuer: 'HackerRank',
+    date: 'February 2026',
+    image: 'python-basic-certificate.png',
+    note: 'Python skill certification.',
+    credentialUrl: 'https://www.hackerrank.com/certificates/6a48a836ad80',
+  },
+  {
+    title: 'Problem Solving (Intermediate)',
+    issuer: 'HackerRank',
+    date: 'February 2026',
+    image: 'problem-solving-certificate.png',
+    note: 'Problem-solving skill certification.',
+    credentialUrl: 'https://www.hackerrank.com/certificates/888d9e99a63b',
+  },
+  {
+    title: 'Software Engineer',
+    issuer: 'HackerRank',
+    date: 'February 2026',
+    image: 'software-engineer-certificate.png',
+    note: 'Software Engineer role certification.',
+  },
+  {
+    title: 'Deliver Ads and Evaluate Outcomes with Facebook Pixel',
+    issuer: 'Meta',
+    date: 'February 2019',
+    image: null,
+    note: 'Credential listed on LinkedIn.',
+  },
+  {
+    title: 'Google Analytics for Beginners',
+    issuer: 'Google',
+    date: 'February 2019 · Expired February 2022',
+    image: null,
+    note: 'Credential listed on LinkedIn; expired in February 2022.',
+  },
+];
