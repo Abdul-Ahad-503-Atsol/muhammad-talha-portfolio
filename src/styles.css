@@ -3076,3 +3076,56 @@ button.project-site-link {
     animation: none !important;
   }
 }
+
+/* Scrollbars */
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #a7bba8 #eef1ec;
+  scrollbar-gutter: stable;
+}
+
+.project-modal,
+.cert-modal,
+.experience-modal {
+  scrollbar-width: thin;
+  scrollbar-color: #a7bba8 #eef1ec;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #f2f5f0, #e8ede6);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #bccfbc, #93aa97);
+  background-clip: padding-box;
+  border: 3px solid #eef1ec;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--green), var(--green-dark));
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--ink);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background: #eef1ec;
+}
