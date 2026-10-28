@@ -1,4 +1,3 @@
-import { ArrowUpRight } from 'lucide-react';
 import ProjectGraphic from '../ui/ProjectGraphic';
 
 export default function ProjectCard({ project, index, onOpen }) {
@@ -37,9 +36,6 @@ export default function ProjectCard({ project, index, onOpen }) {
               <ProjectGraphic type={project.visual} />
             )}
           </div>
-          {/* <div className="art-bottom">
-            <span className="circle-arrow"><ArrowUpRight size={18} /></span>
-          </div> */}
         </div>
         <div className="project-info">
           <h3>{project.title}</h3>
@@ -53,7 +49,7 @@ export default function ProjectCard({ project, index, onOpen }) {
                 onOpen();
               }}
             >
-              See more <ArrowUpRight size={13} style={{ display: 'inline', verticalAlign: 'middle' }} />
+              See more
             </button>
           </p>
           <div className="project-card-actions">
@@ -65,7 +61,7 @@ export default function ProjectCard({ project, index, onOpen }) {
                 rel="noopener noreferrer"
                 onClick={(event) => event.stopPropagation()}
               >
-                Live website <ArrowUpRight size={14} />
+                Live website
               </a>
             ) : (
               <button
@@ -77,7 +73,7 @@ export default function ProjectCard({ project, index, onOpen }) {
                   onOpen();
                 }}
               >
-                Live website <ArrowUpRight size={14} />
+                Live website
               </button>
             )}
           </div>

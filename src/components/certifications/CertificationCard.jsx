@@ -1,4 +1,4 @@
-import { ArrowUpRight, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, ShieldCheck } from 'lucide-react';
 
 export default function CertificationCard({ certificate, onOpen }) {
   return (
@@ -11,7 +11,6 @@ export default function CertificationCard({ certificate, onOpen }) {
         <h3>{certificate.title}</h3>
         <p>{certificate.note}</p>
       </div>
-      <ArrowUpRight className="cert-arrow" size={18} />
     </button>
   );
 }

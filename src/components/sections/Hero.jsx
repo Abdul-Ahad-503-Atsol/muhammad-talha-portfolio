@@ -1,4 +1,4 @@
-import { ArrowDownRight, ArrowUpRight, BrainCircuit, Code2, Sparkles } from 'lucide-react';
+import { BrainCircuit, Code2, Sparkles } from 'lucide-react';
 import { ASSET_BASE } from '../../constants';
 
 export default function Hero() {
@@ -10,8 +10,8 @@ export default function Hero() {
         <h1>Engineering <span className="headline-accent">intelligent</span><br />products for the<br /><span className="outline-text">real world.</span></h1>
         <p className="hero-sub">I build dependable software, AI-powered workflows, and scalable platforms that turn complex problems into practical products.</p>
         <div className="hero-actions">
-          <a className="btn btn-dark" href="#work">Explore my work <ArrowDownRight size={17} /></a>
-          <a className="text-link" href="#contact">Let’s build something <ArrowUpRight size={16} /></a>
+          <a className="btn btn-dark" href="#work">Explore my work</a>
+          <a className="text-link" href="#contact">Let’s build something</a>
         </div>
         <div className="hero-proof">
           <div className="proof-item"><strong>8+</strong><span>Years in software</span></div>

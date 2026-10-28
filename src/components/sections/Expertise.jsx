@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowDownRight, BrainCircuit, Code2, Database, Server } from 'lucide-react';
+import { BrainCircuit, Code2, Database, Server } from 'lucide-react';
 import { skills } from '../../data/skills';
 import ExpertiseCard from '../ui/ExpertiseCard';
 
@@ -61,7 +61,7 @@ export default function Expertise() {
             {visibleSkills.map((skill) => <span key={skill}>{skill}</span>)}
           </div>
           <button type="button" className="skills-toggle" onClick={() => setShowAllSkills((show) => !show)}>
-            {showAllSkills ? 'Show fewer skills' : 'View 20+ more skills'} <ArrowDownRight size={15} />
+            {showAllSkills ? 'Show fewer skills' : 'View 20+ more skills'}
           </button>
         </div>
       </div>

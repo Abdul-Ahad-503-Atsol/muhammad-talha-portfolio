@@ -548,8 +548,7 @@ a:focus-visible {
   flex-direction: column;
   justify-content: space-between;
 }
-.art-top,
-.art-bottom {
+.art-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -569,24 +568,6 @@ a:focus-visible {
 .art-index {
   font: 600 12px var(--display);
   color: #65796b;
-}
-.art-bottom > span:first-child {
-  font-size: 10px;
-  font-weight: 600;
-  color: #4f6155;
-}
-.circle-arrow {
-  width: 33px;
-  height: 33px;
-  border-radius: 50%;
-  background: var(--ink);
-  color: white;
-  display: grid;
-  place-items: center;
-  transition: transform 0.2s;
-}
-.project-open:hover .circle-arrow {
-  transform: rotate(45deg);
 }
 .project-info {
   padding: 18px 18px 20px;
@@ -1186,10 +1167,6 @@ a:focus-visible {
   color: var(--muted);
   line-height: 1.6;
   margin: 0;
-}
-.cert-arrow {
-  color: #849188;
-  flex-shrink: 0;
 }
 .contact-section {
   background: var(--ink);
@@ -2028,14 +2005,6 @@ a:focus-visible {
   min-height: 142px;
 }
 
-.cert-card:hover .cert-arrow {
-  transform: translate(3px, -3px);
-}
-
-.cert-arrow {
-  transition: transform 0.2s;
-}
-
 @media (max-width: 1200px) {
   .project-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2207,23 +2176,16 @@ a:focus-visible {
   box-sizing: border-box;
 }
 
-.project-art:has(.project-real-image) .art-top,
-.project-art:has(.project-real-image) .art-bottom {
+.project-art:has(.project-real-image) .art-top {
   position: absolute;
+
+  top: 16px;
 
   left: 16px;
 
   right: 16px;
 
   z-index: 2;
-}
-
-.project-art:has(.project-real-image) .art-top {
-  top: 16px;
-}
-
-.project-art:has(.project-real-image) .art-bottom {
-  bottom: 16px;
 }
 
 .modal-art:has(.project-modal-image) {
@@ -2271,15 +2233,9 @@ a:focus-visible {
 @media (max-width: 700px) {
   .project-art:has(.project-real-image) .art-top {
     top: 10px;
-  }
 
-  .project-art:has(.project-real-image) .art-bottom {
-    bottom: 10px;
-  }
-
-  .project-art:has(.project-real-image) .art-top,
-  .project-art:has(.project-real-image) .art-bottom {
     left: 10px;
+
     right: 10px;
   }
 
@@ -2589,23 +2545,16 @@ a:focus-visible {
   box-sizing: border-box;
 }
 
-.project-art:has(.project-real-image) .art-top,
-.project-art:has(.project-real-image) .art-bottom {
+.project-art:has(.project-real-image) .art-top {
   position: absolute;
+
+  top: 16px;
 
   left: 16px;
 
   right: 16px;
 
   z-index: 2;
-}
-
-.project-art:has(.project-real-image) .art-top {
-  top: 16px;
-}
-
-.project-art:has(.project-real-image) .art-bottom {
-  bottom: 16px;
 }
 
 .nav .nav-contact {
@@ -2651,10 +2600,6 @@ a:focus-visible {
   line-height: 1.6;
 }
 
-.art-bottom {
-  justify-content: flex-end;
-}
-
 .project-card-actions {
   display: flex;
   gap: 10px;
@@ -2678,7 +2623,9 @@ a:focus-visible {
   text-decoration: underline;
   text-underline-offset: 3px;
   white-space: nowrap;
-  transition: color 180ms ease, opacity 180ms ease;
+  transition:
+    color 180ms ease,
+    opacity 180ms ease;
 }
 
 .project-see-more:hover {
@@ -2699,7 +2646,11 @@ a:focus-visible {
   gap: 5px;
   background: #fff;
   color: #17211f;
-  transition: background 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
 }
 
@@ -2852,35 +2803,12 @@ button.project-site-link {
   font-size: 0.82rem;
 }
 
-.review-card-footer svg {
-  color: #58715f;
-}
-
 .reviews-controls {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 14px;
   margin-top: 14px;
-}
-
-.reviews-arrow {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #d9e1d8;
-  border-radius: 50%;
-  background: #fff;
-  color: #263b2d;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
-}
-
-.reviews-arrow:hover {
-  background: #263b2d;
-  color: #fff;
-  transform: translateY(-2px);
 }
 
 .reviews-dots {
@@ -2898,7 +2826,9 @@ button.project-site-link {
   border-radius: 50%;
   background: #cbd5ca;
   cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
+  transition:
+    transform 0.2s,
+    background 0.2s;
 }
 
 .reviews-dot[aria-current="true"] {
@@ -2969,7 +2899,10 @@ button.project-site-link {
 
 .timeline-item {
   animation: experienceCardIn 0.65s cubic-bezier(0.2, 0.75, 0.25, 1) both;
-  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease !important;
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease !important;
 }
 
 .timeline-item:nth-child(1) {
@@ -3008,7 +2941,9 @@ button.project-site-link {
 }
 
 .timeline-item button {
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .timeline-item button:hover {

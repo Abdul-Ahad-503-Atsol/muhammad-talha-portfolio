@@ -1,4 +1,4 @@
-import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import Modal from '../ui/Modal';
 import { ASSET_BASE } from '../../constants';
 
@@ -25,7 +25,7 @@ export default function CertificationModal({ certificate, onClose }) {
         <p>{certificate.issuer} · {certificate.date}</p>
         {certificate.credentialUrl && (
           <a href={certificate.credentialUrl} target="_blank" rel="noreferrer">
-            View credential <ArrowUpRight size={14} />
+            View credential
           </a>
         )}
       </div>

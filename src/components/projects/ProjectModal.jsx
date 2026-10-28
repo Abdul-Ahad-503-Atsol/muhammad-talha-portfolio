@@ -1,4 +1,3 @@
-import { ArrowUpRight } from 'lucide-react';
 import Modal from '../ui/Modal';
 import ProjectGraphic from '../ui/ProjectGraphic';
 import { CONTACT_EMAIL } from '../../constants';
@@ -30,11 +29,11 @@ export default function ProjectModal({ project, onClose }) {
         <div className="modal-actions">
           {project.url && (
             <a className="btn btn-dark" href={project.url} target="_blank" rel="noopener noreferrer">
-              Visit live website <ArrowUpRight size={16} />
+              Visit live website
             </a>
           )}
           <a className="btn btn-dark" href={`mailto:${CONTACT_EMAIL}?subject=Project%20Enquiry`}>
-            Discuss a similar project <ArrowUpRight size={16} />
+            Discuss a similar project
           </a>
         </div>
       </div>

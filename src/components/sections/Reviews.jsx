@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { reviews } from '../../data/reviews';
 import { ASSET_BASE } from '../../constants';
 import StarIcon from '../ui/StarIcon';
@@ -15,9 +14,6 @@ export default function Reviews() {
     }, 5000);
     return () => window.clearInterval(timer);
   }, [paused]);
-
-  const showPrevious = () => setReviewIndex((current) => (current - 1 + reviews.length) % reviews.length);
-  const showNext = () => setReviewIndex((current) => (current + 1) % reviews.length);
 
   return (
     <section className="section reviews-section" id="reviews">
@@ -59,16 +55,13 @@ export default function Reviews() {
                       onError={(event) => console.error('Unable to load review image:', event.currentTarget.src)}
                     />
                   </div>
-                  <div className="review-card-footer"><span>Project review</span><ArrowUpRight size={17} /></div>
+                  <div className="review-card-footer"><span>Project review</span></div>
                 </article>
               );
             })}
           </div>
         </div>
         <div className="reviews-controls" aria-label="Review carousel controls">
-          {/* <button type="button" className="reviews-arrow" aria-label="Previous reviews" onClick={showPrevious}>
-            <ArrowRight size={18} style={{ transform: 'rotate(180deg)' }} />
-          </button> */}
           <div className="reviews-dots">
             {reviews.map((review, index) => (
               <button
@@ -81,9 +74,6 @@ export default function Reviews() {
               />
             ))}
           </div>
-          {/* <button type="button" className="reviews-arrow" aria-label="Next reviews" onClick={showNext}>
-            <ArrowRight size={18} />
-          </button> */}
         </div>
         <p className="reviews-note">Original review screenshots are shown without rewriting the client feedback.</p>
       </div>

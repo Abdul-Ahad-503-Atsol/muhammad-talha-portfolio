@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
 import { projectCategories, projects } from '../../data/projects';
 import ProjectCard from '../projects/ProjectCard';
 import ProjectModal from '../projects/ProjectModal';
@@ -46,7 +45,7 @@ export default function Projects() {
         </div>
         <div className="work-foot">
           <span><span className="status-dot" /> More detail available on request</span>
-          <a href="#contact" className="inline-link">Have a project in mind? <ArrowUpRight size={16} /></a>
+          <a href="#contact" className="inline-link">Have a project in mind?</a>
         </div>
       </div>
       {selectedProject && (
