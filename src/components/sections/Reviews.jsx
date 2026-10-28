@@ -66,9 +66,9 @@ export default function Reviews() {
           </div>
         </div>
         <div className="reviews-controls" aria-label="Review carousel controls">
-          <button type="button" className="reviews-arrow" aria-label="Previous reviews" onClick={showPrevious}>
+          {/* <button type="button" className="reviews-arrow" aria-label="Previous reviews" onClick={showPrevious}>
             <ArrowRight size={18} style={{ transform: 'rotate(180deg)' }} />
-          </button>
+          </button> */}
           <div className="reviews-dots">
             {reviews.map((review, index) => (
               <button
@@ -81,9 +81,9 @@ export default function Reviews() {
               />
             ))}
           </div>
-          <button type="button" className="reviews-arrow" aria-label="Next reviews" onClick={showNext}>
+          {/* <button type="button" className="reviews-arrow" aria-label="Next reviews" onClick={showNext}>
             <ArrowRight size={18} />
-          </button>
+          </button> */}
         </div>
         <p className="reviews-note">Original review screenshots are shown without rewriting the client feedback.</p>
       </div>
