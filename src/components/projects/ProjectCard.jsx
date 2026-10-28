@@ -37,9 +37,9 @@ export default function ProjectCard({ project, index, onOpen }) {
               <ProjectGraphic type={project.visual} />
             )}
           </div>
-          <div className="art-bottom">
+          {/* <div className="art-bottom">
             <span className="circle-arrow"><ArrowUpRight size={18} /></span>
-          </div>
+          </div> */}
         </div>
         <div className="project-info">
           <h3>{project.title}</h3>
