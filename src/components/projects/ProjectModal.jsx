@@ -11,7 +11,7 @@ export default function ProjectModal({ project, onClose }) {
             src={project.image}
             alt={`${project.title} dashboard screenshot`}
             className="project-modal-image"
-            style={{ display: 'block', width: '100%', height: '100%', maxWidth: 'none', margin: 0, padding: 0, objectFit: 'cover', objectPosition: 'center', boxSizing: 'border-box' }}
+            style={{ display: 'block', width: '100%', maxHeight: '350px', maxWidth: 'none', margin: 0, padding: 0, objectFit: 'cover', objectPosition: 'center', boxSizing: 'border-box' }}
           />
         ) : (
           <ProjectGraphic type={project.visual} />
