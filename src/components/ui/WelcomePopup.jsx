@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import Button from './Button';
+import useBodyScrollLock from '../../hooks/useBodyScrollLock';
 
 export default function WelcomePopup() {
   const [visible, setVisible] = useState(false);
@@ -9,6 +10,8 @@ export default function WelcomePopup() {
     const timer = window.setTimeout(() => setVisible(true), 3000);
     return () => window.clearTimeout(timer);
   }, []);
+
+  useBodyScrollLock(visible);
 
   if (!visible) return null;
 
