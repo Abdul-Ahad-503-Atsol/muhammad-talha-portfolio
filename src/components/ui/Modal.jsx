@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
 import useBodyScrollLock from '../../hooks/useBodyScrollLock';
 import Button from './Button';
@@ -22,7 +23,7 @@ export default function Modal({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [onClose]);
 
-  return (
+  return createPortal(
     <div
       className={backdropClassName}
       onMouseDown={(event) => {
@@ -35,6 +36,7 @@ export default function Modal({
         </Button>
         {children}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
