@@ -1,7 +1,7 @@
 import Modal from '../ui/Modal';
 import ProjectGraphic from '../ui/ProjectGraphic';
 import Button from '../ui/Button';
-import { CONTACT_EMAIL } from '../../constants';
+import { BOOKING_URL } from '../../constants';
 
 export default function ProjectModal({ project, onClose }) {
   return (
@@ -33,7 +33,7 @@ export default function ProjectModal({ project, onClose }) {
               Visit live website
             </Button>
           )}
-          <Button href={`mailto:${CONTACT_EMAIL}?subject=Project%20Enquiry`}>
+          <Button variant="subtle" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Discuss a similar project
           </Button>
         </div>
