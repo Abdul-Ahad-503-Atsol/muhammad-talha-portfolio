@@ -45,10 +45,7 @@ export default function Projects() {
             />
           ))}
         </div>
-        <div className="work-foot">
-          <span><span className="status-dot" /> More detail available on request</span>
-          <Button variant="text" href="#contact">Have a project in mind?</Button>
-        </div>
+        
       </div>
       {selectedProject && (
         <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
