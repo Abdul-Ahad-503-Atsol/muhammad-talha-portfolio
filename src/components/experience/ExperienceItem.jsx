@@ -22,11 +22,9 @@ export default function ExperienceItem({ role, company, points }) {
           <ul style={{ margin: 0, paddingLeft: '18px', lineHeight: 1.7, flex: '1 1 auto' }}>
             {visiblePoints.map((point) => <li key={point} style={{ marginBottom: '8px' }}>{point}</li>)}
           </ul>
-          {points.length > visiblePoints.length && (
-            <Button variant="inline" className="experience-see-more" onClick={() => setExpanded(true)}>
-              See more +
-            </Button>
-          )}
+          <Button variant="inline" className="experience-see-more" onClick={() => setExpanded(true)}>
+            See more +
+          </Button>
         </div>
       </article>
       {expanded && (
