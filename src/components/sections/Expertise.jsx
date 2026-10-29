@@ -43,7 +43,7 @@ export default function Expertise() {
 
   return (
     <section className="section-wrap section expertise-section" id="expertise">
-      <div className="section-kicker">EXPERTISE</div>
+      {/* <div className="section-kicker">EXPERTISE</div> */}
       <div className="section-top">
         <h2>From first sketch<br />to <em>stable scale.</em></h2>
         <p className="section-intro">A practical engineering toolkit for building and improving real products—from APIs and data to AI workflows and cloud infrastructure.</p>

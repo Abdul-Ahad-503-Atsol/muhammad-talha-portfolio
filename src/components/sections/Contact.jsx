@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section className="contact-section section" id="contact">
       <div className="section-wrap contact-inner">
-        <div className="section-kicker">CONTACT</div>
+        {/* <div className="section-kicker">CONTACT</div> */}
         <div className="contact-layout">
           <div>
             <h2>Have a challenge<br />worth <em>solving?</em></h2>

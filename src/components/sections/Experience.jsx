@@ -5,7 +5,7 @@ export default function Experience() {
   return (
     <section className="experience-section section" id="experience">
       <div className="section-wrap">
-        <div className="section-kicker">EXPERIENCE</div>
+        {/* <div className="section-kicker">EXPERIENCE</div> */}
         <div
           className="experience-intro-card"
           style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '28px', padding: 'clamp(24px,4vw,42px)', margin: '0 0 34px', background: '#e8eee5', border: '1px solid #d8e1d5', borderRadius: '24px', boxShadow: '0 12px 32px rgba(23,33,31,.06)', flexWrap: 'wrap' }}

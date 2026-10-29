@@ -18,7 +18,7 @@ export default function Projects() {
       <div className="section-wrap">
         <div className="section-top">
           <div>
-            <div className="section-kicker">MY WORK</div>
+            {/* <div className="section-kicker">MY WORK</div> */}
             <h2>Projects built to <em>make an impact.</em></h2>
           </div>
           <p className="section-intro">A selection of software, AI, data, and platform projects across industries. Open a project to explore its scope and technology.</p>

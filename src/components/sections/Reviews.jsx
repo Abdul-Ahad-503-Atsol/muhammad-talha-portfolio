@@ -19,7 +19,7 @@ export default function Reviews() {
   return (
     <section className="section reviews-section" id="reviews">
       <div className="reviews-inner">
-        <div className="section-kicker">CLIENT REVIEWS</div>
+        {/* <div className="section-kicker">CLIENT REVIEWS</div> */}
         <div className="section-top">
           <h2>Good work speaks.<br /><em>Clients confirm it.</em></h2>
           <p className="section-intro">A selection of feedback on engineering quality, communication, reliability, and delivery.</p>
