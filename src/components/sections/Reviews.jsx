@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { reviews } from '../../data/reviews';
 import { ASSET_BASE } from '../../constants';
 import StarIcon from '../ui/StarIcon';
+import Button from '../ui/Button';
 
 export default function Reviews() {
   const [reviewIndex, setReviewIndex] = useState(0);
@@ -64,10 +65,9 @@ export default function Reviews() {
         <div className="reviews-controls" aria-label="Review carousel controls">
           <div className="reviews-dots">
             {reviews.map((review, index) => (
-              <button
+              <Button
                 key={review.image}
-                type="button"
-                className="reviews-dot"
+                variant="dot"
                 aria-label={`Show review ${index + 1}`}
                 aria-current={reviewIndex === index ? 'true' : 'false'}
                 onClick={() => setReviewIndex(index)}

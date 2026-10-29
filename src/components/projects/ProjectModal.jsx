@@ -1,5 +1,6 @@
 import Modal from '../ui/Modal';
 import ProjectGraphic from '../ui/ProjectGraphic';
+import Button from '../ui/Button';
 import { CONTACT_EMAIL } from '../../constants';
 
 export default function ProjectModal({ project, onClose }) {
@@ -28,13 +29,13 @@ export default function ProjectModal({ project, onClose }) {
         </div>
         <div className="modal-actions">
           {project.url && (
-            <a className="btn btn-dark" href={project.url} target="_blank" rel="noopener noreferrer">
+            <Button href={project.url} target="_blank" rel="noopener noreferrer">
               Visit live website
-            </a>
+            </Button>
           )}
-          <a className="btn btn-dark" href={`mailto:${CONTACT_EMAIL}?subject=Project%20Enquiry`}>
+          <Button href={`mailto:${CONTACT_EMAIL}?subject=Project%20Enquiry`}>
             Discuss a similar project
-          </a>
+          </Button>
         </div>
       </div>
     </Modal>

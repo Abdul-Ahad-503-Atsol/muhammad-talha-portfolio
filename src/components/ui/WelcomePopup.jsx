@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { X } from 'lucide-react';
+import Button from './Button';
 
 export default function WelcomePopup() {
   const [visible, setVisible] = useState(false);
@@ -35,17 +37,14 @@ export default function WelcomePopup() {
           animation: 'welcomePopupIn .35s ease both',
         }}
       >
-        <button
-          type="button"
+        <Button
+          variant="icon"
+          className="welcome-popup-close"
           onClick={() => setVisible(false)}
           aria-label="Close welcome popup"
-          style={{
-            position: 'absolute', top: '12px', right: '14px',
-            width: '36px', height: '36px', border: '1px solid #e0e6df',
-            borderRadius: '50%', background: '#f6f8f5', color: '#25332b',
-            fontSize: '24px', lineHeight: 1, cursor: 'pointer',
-          }}
-        >×</button>
+        >
+          <X />
+        </Button>
         <span style={{ display: 'block', marginBottom: '14px', color: '#58715f', fontSize: '.75rem', fontWeight: 750, letterSpacing: '.13em' }}>WELCOME</span>
         <h2 id="welcome-popup-title" style={{ margin: '0 22px 12px 0', fontSize: 'clamp(1.65rem,4vw,2.25rem)', lineHeight: 1.2 }}>
           Welcome to the<br />
@@ -55,16 +54,12 @@ export default function WelcomePopup() {
           Explore projects, engineering experience, and AI-powered solutions.
         </p>
         <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', flexWrap: 'wrap' }}>
-          <button
-            type="button"
-            onClick={() => setVisible(false)}
-            style={{ padding: '11px 17px', border: '1px solid #d8e1d5', borderRadius: '999px', background: '#f6f8f5', color: '#263b2d', fontWeight: 650, cursor: 'pointer' }}
-          >Thank you</button>
-          <button
-            type="button"
-            onClick={() => setVisible(false)}
-            style={{ padding: '11px 19px', border: 0, borderRadius: '999px', background: '#263b2d', color: '#fff', fontWeight: 650, cursor: 'pointer' }}
-          >I’m a client</button>
+          <Button variant="subtle" size="sm" pill onClick={() => setVisible(false)}>
+            Thank you
+          </Button>
+          <Button size="sm" pill onClick={() => setVisible(false)}>
+            I’m a client
+          </Button>
         </div>
       </div>
     </div>

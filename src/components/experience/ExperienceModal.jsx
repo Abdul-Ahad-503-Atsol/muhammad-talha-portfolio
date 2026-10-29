@@ -1,4 +1,5 @@
 import Modal from '../ui/Modal';
+import Button from '../ui/Button';
 
 export default function ExperienceModal({ role, company, points, onClose }) {
   return (
@@ -16,13 +17,9 @@ export default function ExperienceModal({ role, company, points, onClose }) {
       <ul style={{ margin: 0, paddingLeft: '22px', lineHeight: 1.8, color: '#66736b' }}>
         {points.map((point, index) => <li key={`${index}-${point}`} style={{ marginBottom: '14px' }}>{point}</li>)}
       </ul>
-      <button
-        type="button"
-        onClick={onClose}
-        style={{ marginTop: '12px', padding: '11px 18px', border: 0, borderRadius: '10px', background: '#263b2d', color: '#fff', fontWeight: 650, cursor: 'pointer' }}
-      >
+      <Button size="sm" className="experience-modal-close" onClick={onClose}>
         Close details
-      </button>
+      </Button>
     </Modal>
   );
 }

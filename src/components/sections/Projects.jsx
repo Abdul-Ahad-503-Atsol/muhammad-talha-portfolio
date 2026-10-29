@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { projectCategories, projects } from '../../data/projects';
 import ProjectCard from '../projects/ProjectCard';
 import ProjectModal from '../projects/ProjectModal';
+import Button from '../ui/Button';
 
 export default function Projects() {
   const [filter, setFilter] = useState('All');
@@ -24,13 +25,14 @@ export default function Projects() {
         </div>
         <div className="filters" aria-label="Filter projects">
           {projectCategories.map((category) => (
-            <button
+            <Button
               key={category}
-              className={filter === category ? 'filter active' : 'filter'}
+              variant="filter"
+              active={filter === category}
               onClick={() => setFilter(category)}
             >
               {category}
-            </button>
+            </Button>
           ))}
         </div>
         <div className="project-grid">
@@ -45,7 +47,7 @@ export default function Projects() {
         </div>
         <div className="work-foot">
           <span><span className="status-dot" /> More detail available on request</span>
-          <a href="#contact" className="inline-link">Have a project in mind?</a>
+          <Button variant="text" href="#contact">Have a project in mind?</Button>
         </div>
       </div>
       {selectedProject && (

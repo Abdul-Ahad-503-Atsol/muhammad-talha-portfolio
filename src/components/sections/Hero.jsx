@@ -1,5 +1,6 @@
 import { BrainCircuit, Code2, Sparkles } from 'lucide-react';
 import { ASSET_BASE, BOOKING_URL } from '../../constants';
+import Button from '../ui/Button';
 
 export default function Hero() {
   return (
@@ -10,8 +11,8 @@ export default function Hero() {
         <h1>Engineering <span className="headline-accent">intelligent</span><br />products for the<br /><span className="outline-text">real world.</span></h1>
         <p className="hero-sub">I build dependable software, AI-powered workflows, and scalable platforms that turn complex problems into practical products.</p>
         <div className="hero-actions">
-          <a className="btn btn-dark" href="#work">Explore my work</a>
-          <a className="text-link" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a meeting</a>
+          <Button href="#work">Explore my work</Button>
+          <Button variant="accent" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a meeting</Button>
         </div>
         <div className="hero-proof">
           <div className="proof-item"><strong>8+</strong><span>Years in software</span></div>

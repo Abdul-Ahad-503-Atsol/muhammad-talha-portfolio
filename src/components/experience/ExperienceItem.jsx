@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ExperienceModal from './ExperienceModal';
+import Button from '../ui/Button';
 
 export default function ExperienceItem({ role, company, points }) {
   const [expanded, setExpanded] = useState(false);
@@ -22,13 +23,9 @@ export default function ExperienceItem({ role, company, points }) {
             {visiblePoints.map((point) => <li key={point} style={{ marginBottom: '8px' }}>{point}</li>)}
           </ul>
           {points.length > visiblePoints.length && (
-            <button
-              type="button"
-              onClick={() => setExpanded(true)}
-              style={{ alignSelf: 'flex-start', marginTop: '12px', padding: '5px 0', border: 0, background: 'transparent', color: '#58715f', fontSize: '.9rem', fontWeight: 650, textDecoration: 'underline', textUnderlineOffset: '3px', cursor: 'pointer' }}
-            >
+            <Button variant="inline" className="experience-see-more" onClick={() => setExpanded(true)}>
               See more +
-            </button>
+            </Button>
           )}
         </div>
       </article>

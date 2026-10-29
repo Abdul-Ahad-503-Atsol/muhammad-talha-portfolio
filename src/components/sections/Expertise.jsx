@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { BrainCircuit, Code2, Database, Server } from 'lucide-react';
 import { skills } from '../../data/skills';
 import ExpertiseCard from '../ui/ExpertiseCard';
+import Button from '../ui/Button';
 
 const expertiseAreas = [
   {
@@ -60,9 +61,9 @@ export default function Expertise() {
           <div className="skill-cloud">
             {visibleSkills.map((skill) => <span key={skill}>{skill}</span>)}
           </div>
-          <button type="button" className="skills-toggle" onClick={() => setShowAllSkills((show) => !show)}>
+          <Button variant="toggle" onClick={() => setShowAllSkills((show) => !show)}>
             {showAllSkills ? 'Show fewer skills' : 'View 20+ more skills'}
-          </button>
+          </Button>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import Button from '../ui/Button';
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -28,19 +29,18 @@ export default function Header() {
         <span className="brand-mark">MT<span>.</span></span>
         <span className="brand-name">Muhammad Talha<small>Software Engineer · AI Systems</small></span>
       </a>
-      <button
-        type="button"
-        className="mobile-toggle"
+      <Button
+        variant="menu"
         onClick={() => setMenuOpen((open) => !open)}
         aria-label="Toggle navigation"
       >
         {menuOpen ? <X /> : <Menu />}
-      </button>
+      </Button>
       <nav className={menuOpen ? 'nav nav-open' : 'nav'}>
         {navLinks.map((link) => (
           <a key={link.href} href={link.href} onClick={closeMenu}>{link.label}</a>
         ))}
-        <a className="nav-contact" href="#contact" onClick={closeMenu}>Let’s talk </a>
+        <Button variant="primary" href="#contact" onClick={closeMenu}>Let’s talk</Button>
       </nav>
     </header>
   );

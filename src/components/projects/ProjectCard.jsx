@@ -1,4 +1,5 @@
 import ProjectGraphic from '../ui/ProjectGraphic';
+import Button from '../ui/Button';
 
 export default function ProjectCard({ project, index, onOpen }) {
   return (
@@ -41,32 +42,30 @@ export default function ProjectCard({ project, index, onOpen }) {
           <h3>{project.title}</h3>
           <p className="project-summary">
             {project.summary}{' '}
-            <button
-              type="button"
-              className="project-see-more"
+            <Button
+              variant="inline"
               onClick={(event) => {
                 event.stopPropagation();
                 onOpen();
               }}
             >
               See more
-            </button>
+            </Button>
           </p>
           <div className="project-card-actions">
             {project.url ? (
-              <a
-                className="project-site-link"
+              <Button
+                variant="outline"
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(event) => event.stopPropagation()}
               >
                 Live website
-              </a>
+              </Button>
             ) : (
-              <button
-                type="button"
-                className="project-site-link"
+              <Button
+                variant="outline"
                 title="No live website URL was provided; open project details instead"
                 onClick={(event) => {
                   event.stopPropagation();
@@ -74,7 +73,7 @@ export default function ProjectCard({ project, index, onOpen }) {
                 }}
               >
                 Live website
-              </button>
+              </Button>
             )}
           </div>
         </div>

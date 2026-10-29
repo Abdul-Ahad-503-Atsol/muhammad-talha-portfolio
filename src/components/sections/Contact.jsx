@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { CONTACT_EMAIL } from '../../constants';
+import Button from '../ui/Button';
 
 export default function Contact() {
   return (
@@ -10,7 +11,7 @@ export default function Contact() {
           <div>
             <h2>Have a challenge<br />worth <em>solving?</em></h2>
             <p className="contact-copy">Tell me what you’re building, what’s slowing you down, or where AI could make a practical difference. Let’s talk about the next step.</p>
-            <a className="btn btn-light" href={`mailto:${CONTACT_EMAIL}?subject=Project%20Enquiry`}>Start a conversation</a>
+            <Button variant="accent" href={`mailto:${CONTACT_EMAIL}?subject=Project%20Enquiry`}>Start a conversation</Button>
           </div>
           <div className="contact-card">
             <span className="contact-card-label">GET IN TOUCH</span>

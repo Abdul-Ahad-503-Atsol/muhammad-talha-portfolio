@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { X } from 'lucide-react';
 import useBodyScrollLock from '../../hooks/useBodyScrollLock';
+import Button from './Button';
 
 export default function Modal({
   label,
@@ -29,9 +30,9 @@ export default function Modal({
       }}
     >
       <div className={className} role="dialog" aria-modal="true" aria-label={label}>
-        <button type="button" className="modal-close" onClick={onClose} aria-label={closeLabel}>
+        <Button variant="icon" onClick={onClose} aria-label={closeLabel}>
           {closeContent}
-        </button>
+        </Button>
         {children}
       </div>
     </div>
